@@ -1,0 +1,62 @@
+<section ng-init="calculate()">        
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-bar">
+                <div class="top-bar-inner">
+                    <button class="btn btn-primary" ng-click="goBack()">Back to Products</button>
+                </div>
+            </div>
+        </div>
+        <br/>  
+    </div><!--contianre-fluid end-->
+    <div class="container">
+    	<div class="col-md-8 col-sm-8 col-xs-8 shborder">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mtop30" ng-repeat="order in orders">
+                <div class="item-box">
+                    <div class="items-image row">
+                      <div class="col-md-3 no-pad">
+                        <img ng-src="{{order.phone.imageUrl}}" alt="{{order.phone.name}}">
+                      </div>
+                      <div class="col-md-2 no-pad">
+                        <span>{{order.phone.name}}</span>
+                      </div>
+                      <div class="col-md-1 no-pad">
+                        <span>${{order.phone.price}}</span>
+                      </div>
+                      <div class="col-md-3 no-pad">
+                      	<div addsub value="order.count" min="1" max="5" step="1" editable></div>    
+                      </div>
+                      <div class="col-md-1 no-pad">
+                        <span>${{order.phone.price * order.count}}</span>
+                      </div>
+                      <div class="col-md-2 no-pad">
+                      	<a type="button" class="btn btn-warning btn-circle" ng-click="removeItem($index)"><i class="glyphicon glyphicon-remove"></i></a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+    	</div>
+    	<div class="col-md-4 col-sm-4 col-xs-4 shborder">
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mbotton30 mtop30">
+    			<span class="fkeys">Total Price</span>: <span class="fvals">${{totalprice}}</span>
+    		</div>
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mbotton30">
+    			<span class="fkeys">Discount ({{discount}}%)</span>: <span class="fvals">${{dprice}}</span>
+    		</div>    		
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mbotton30">
+    			<span class="fkeys">VAT ({{vat}}%)</span>: <span class="fvals">${{vprice}}</span>
+    		</div>
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mbotton30">
+    			<span class="fkeys">Final Price</span>: <span class="fvals">${{finalprice}}</span>
+    		</div>   
+    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mbotton30">
+    			<span class="fkeys">Shipping Details:</span>
+    		</div>
+    		<div class="top-bar-inner">
+    			<button class="btn btn-success" ng-click="makePayment()">Proceed</button>
+    		</div>    		    		
+    	</div>
+  	
+    </div>
+</section>

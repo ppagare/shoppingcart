@@ -1,0 +1,119 @@
+.top-bar{
+    background-color: #eee; 
+}
+.top-bar-inner{
+    padding: 5px;
+    float: right;
+}
+
+.login-box{
+    border: 2px solid #eaeaea;  
+    margin-top:15%; 
+}
+
+.login-heading{
+    background-color: #eee;
+    padding: 5px;
+}
+
+.login-box-inner{
+padding: 10%;
+}
+    
+
+.item-box{
+    border: 2px solid #eaeaea;
+    margin-bottom: 10px;
+}
+
+
+.items-image{
+    text-align: center;
+    padding: 15px;
+}
+
+.items-image img{
+    width:50%;
+    max-height:100px; 
+}
+
+.iteam-price{
+    text-align: center;
+}
+
+.iteam-qty{
+    text-align: center;
+}
+
+.add-to-cart-btn{
+   text-align: center; 
+   margin-top: -7px;
+   margin-bottom: 7px;
+}
+
+.shborder {
+    border:solid 1px;
+    border-color:gray;
+    height: 400px;
+    overflow: auto;
+}
+
+.fkeys {
+    font-size:18px;
+    color:black;
+    font-style: bold;
+}
+
+.fvals {
+    font-size:18px;
+    color:gray;
+    font-style: italic;
+}
+
+.mbotton30 {
+    margin-bottom: 30px;
+}
+
+.mtop30 {
+    margin-top: 30px;
+}
+
+.counter-container .counter-minus, .counter-plus {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    background: #333;
+    color: white;
+    margin: 0;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.counter-container .counter-field {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    width: 40px;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.clborder {
+    height: 300px;
+    overflow: auto;
+}
+
+.cllborder {
+    height: 100px;
+    overflow: auto;
+}

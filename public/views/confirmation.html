@@ -1,0 +1,64 @@
+    <div class="container" ng-init="countItems()">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-bar">
+                    <div class="top-bar-inner text-right">
+                        <a class="btn btn-primary" href="/">Back to Products</a>
+                    </div>
+                </div>
+            </div>
+            <br/>  
+        </div>
+
+        <div class="container">
+          <div class="col-md-6 col-sm-6 col-xs-6 shborder">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mtop30">
+                  <h2>SHIPPING ADDRESS</h2>
+                  <textarea rows="4" cols="50"></textarea>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mtop30">
+                <label>Email Address:</label>
+                <input type="text" ng-model="lemailid" class="form-control" name="email" style="width:50%"> 
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mtop30">
+                <label>Phone Number:</label>
+                <input type="text" class="form-control" name="phone" style="width:50%"> 
+                </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 shborder">
+            <div class="col-md-12 col-sm-12 col-xs-12 clborder">
+                    <div class="item-box mtop30" ng-repeat="order in orders">
+                        <div class="items-image row">
+                          <div class="col-md-4 no-pad">
+                            <img ng-src={{order.phone.imageUrl}} alt="order.phone.name">
+                          </div>
+                          <div class="col-md-8 no-pad">
+                            <span>{{order.phone.name}}</span>
+                          </div>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 cllborder">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="fkeys">Total Items</span>: <span class="fvals">{{itemcount}}</span>
+              </div>
+        
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <span class="fkeys">Total price: </span><span class="fvals">${{finalprice}}</span>
+              </div>
+            </div>
+
+
+          </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-bar">
+                    <div class="top-bar-inner text-right">
+                        <a class="btn btn-success" ng-click="gopay()" href="">Make Payment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

@@ -1,0 +1,64 @@
+  <section>        
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 top-bar">
+                <div class="top-bar-inner">
+                    <button class="btn btn-primary" ng-click="viewCart()">View Cart <sapn class="badge">{{orderCount}}</sapn></button>
+                    <button ng-if="loggedin" class="btn btn-default" ng-click="logout()">Logout <sapn class="badge">{{logout}}</sapn></button>
+                </div>
+            </div>
+        </div>
+        <br/>  
+    </div><!--contianre-fluid end-->
+    <div class="container">
+         <div class="row">
+            <div class="col-xs-12 col-ms-12 col-md-12 col-lg-12">   
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" ng-repeat="phone in phones">
+                        <div class="item-box">
+                            <div class="items-image row">
+                              <div class="col-md-8 col-sm-8 col-xs-8 no-pad">
+                                <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}">
+                              </div>
+                              <div class="col-md-4 col-sm-4 col-xs-4 no-pad">
+                                <span>{{phone.name}}</span>
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="iteam-price">
+                                                <sapn>$ {{phone.price}}</sapn> X
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                             <div class="iteam-qty">
+                                                 <select ng-model="selection">
+                                                   <option>1</option>
+                                                   <option>2</option> 
+                                                   <option>3</option> 
+                                                   <option>4</option> 
+                                                   <option>5</option>  
+                                                </select>
+                                             </div>  
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="add-to-cart-btn">
+                                              <button class="btn btn-default" ng-click="addtoCart(phone, selection)"> Add</button>  
+                                            </div>                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--iteam gruop 1 end -->
+
+                <br/>
+                
+                </div><!--col-12 end  -->
+            </div><!--col-row end  -->
+        </div><!--container end  -->
+    </div>
+  </section>

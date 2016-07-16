@@ -1,0 +1,41 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="shoppingCart">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>Shopping Cart App</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#todo-list 				{ margin-bottom:30px; }
+		#todo-form 	 			{ margin-bottom:50px; }
+	</style>
+
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+	<script src="services/savecartservice.js"></script> <!-- load our todo service -->
+	<script src="services/phoneservice.js"></script> <!-- load our todo service -->
+	<script src="controllers/main.js"></script> <!-- load up our controller -->
+	<script src="directives/incdec.js"></script>
+	<script src="routes/routes.js"></script>
+
+</head>
+<!-- SET THE CONTROLLER -->
+	<body>
+		<div ng-view=""></div>
+
+
+
+	</body>
+</html>
